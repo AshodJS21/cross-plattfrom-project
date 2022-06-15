@@ -13,7 +13,7 @@ const NewsList = () => {
     
     useEffect(() => {
         //fetching the data
-        // async await segment                                                                          ${process.env.WEATHER_API_Key}
+        // async await segment                                                                      
         const getArticles = async () => {
             const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=se&apiKey=${process.env.REACT_APP_API_Key}`)  
             //console.log(response)

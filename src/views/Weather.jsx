@@ -15,10 +15,12 @@ import '../style/Weather.css'
     description: "",
     });
 
-    useEffect(() => {
+    useEffect(() => {                                                                                       
     const fetchWeather = async () => {
         const response = await axios.get(
-        "https://api.openweathermap.org/data/2.5/weather?q=vasteras&appid=9fc24343cc8f14c8d53f63eabf338c4f&&units=metric"
+             
+            (` https://api.openweathermap.org/data/2.5/weather?q=vasteras&appid=9fc24343cc8f14c8d53f63eabf338c4f&&units=metric`)
+        //"https://api.openweathermap.org/data/2.5/weather?q=vasteras&appid=9fc24343cc8f14c8d53f63eabf338c4f&&units=metric"
         
         );
         setWeather({
