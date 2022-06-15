@@ -1,0 +1,22 @@
+.App {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-page{
+    margin: 20px;
+    padding: 20px;
+
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+    
+
+    display:flex;
+    flex-wrap: wrap; 
+    justify-content: content;
+    justify-content: space-evenly;
+    
+    gap: 50px 10px; 
+}
+
