@@ -18,11 +18,10 @@ import '../style/Weather.css'
     useEffect(() => {                                                                                       
     const fetchWeather = async () => {
         const response = await axios.get(
-             
-            (` https://api.openweathermap.org/data/2.5/weather?q=vasteras&appid=9fc24343cc8f14c8d53f63eabf338c4f&&units=metric`)
-        //"https://api.openweathermap.org/data/2.5/weather?q=vasteras&appid=9fc24343cc8f14c8d53f63eabf338c4f&&units=metric"
-        
-        );
+            `https://api.openweathermap.org/data/2.5/weather?q=vasteras&appid=710895c1d23edd144cbcfc5dce12860ff&&units=metric
+            `);
+            //(`https://api.openweathermap.org/data/2.5/weather?q=vasteras&appid=${process.env.WEATHER_API_Key}`)
+
         setWeather({
         temp: response.data.main.temp,
         feels: response.data.main.feels_like,
