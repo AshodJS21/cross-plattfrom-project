@@ -18,9 +18,8 @@ import '../style/Weather.css'
     useEffect(() => {                                                                                       
     const fetchWeather = async () => {
         const response = await axios.get( //workes in 24hs
-            `https://api.openweathermap.org/data/2.5/weather?q=vasteras&appid=710895c1d23edd144cbcfc5dce12860ff&&units=metric
-            `);
-            //(`https://api.openweathermap.org/data/2.5/weather?q=vasteras&appid=${process.env.WEATHER_API_Key}`)
+             //`https://api.openweathermap.org/data/2.0/weather?q=vasteras&appid=710895c1d23edd144cbcfc5dce12860f`);
+            `https://api.openweathermap.org/data/2.5/weather?q=vasteras&appid=${process.env.REACT_APP_WEATHER_API_Key}&&units=metric`)
 
         setWeather({
         temp: response.data.main.temp,
@@ -29,8 +28,8 @@ import '../style/Weather.css'
         max: response.data.main.temp_max,
         description: response.data.weather[0].main,
         name: response.data.name,
-        });
-        //console.log(response)
+        })
+        
     };
     fetchWeather();
     }, []);
