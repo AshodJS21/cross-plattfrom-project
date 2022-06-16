@@ -17,7 +17,7 @@ import '../style/Weather.css'
 
     useEffect(() => {                                                                                       
     const fetchWeather = async () => {
-        const response = await axios.get(
+        const response = await axios.get( //workes in 24hs
             `https://api.openweathermap.org/data/2.5/weather?q=vasteras&appid=710895c1d23edd144cbcfc5dce12860ff&&units=metric
             `);
             //(`https://api.openweathermap.org/data/2.5/weather?q=vasteras&appid=${process.env.WEATHER_API_Key}`)
